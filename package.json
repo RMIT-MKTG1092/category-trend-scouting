@@ -1,5 +1,6 @@
 {
   "name": "ingredient-scouting-tool",
+  "homepage": "https://rmit-mktg1092.github.io/category-trend-scouting",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
