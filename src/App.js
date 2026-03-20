@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const categories = [
-  { value: "beauty", label: "Health, Beauty and Personal Care" },
   { value: "petcare", label: "Pet Care and Animal Wellness" },
+  { value: "beauty", label: "Health, Beauty and Personal Care" },
   { value: "food", label: "Food and Beverage" },
 ];
 
@@ -18,7 +18,7 @@ const ingredientsData = {
       novelty: "Mainstream",
       links: [
         { label: "Passport by Euromonitor (RMIT login)", url: "https://rmit.primo.exlibrisgroup.com/permalink/61RMIT_INST/1b6r78u/alma9921449710901341" },
-        { label: "PubMed — marine extract research", url: "https://pubmed.ncbi.nlm.nih.gov/?term=sea+fennel+extract+skin" }
+        { label: "PubMed — marine extract research (free)", url: "https://pubmed.ncbi.nlm.nih.gov/?term=sea+fennel+extract+skin" }
       ]
     },
     {
@@ -29,7 +29,7 @@ const ingredientsData = {
       novelty: "Emerging",
       links: [
         { label: "MarketLine (RMIT login)", url: "https://rmit.primo.exlibrisgroup.com/permalink/61RMIT_INST/1b6r78u/alma9921476111401341" },
-        { label: "Google Scholar — moringa oil efficacy", url: "https://scholar.google.com/scholar?q=moringa+oil+skin+benefit" }
+        { label: "Google Scholar — moringa oil efficacy (free)", url: "https://scholar.google.com/scholar?q=moringa+oil+skin+benefit" }
       ]
     },
     {
@@ -50,7 +50,7 @@ const ingredientsData = {
       novelty: "Emerging",
       links: [
         { label: "Mintel Beauty Blog (free)", url: "https://www.mintel.com/blog/beauty-market-news" },
-        { label: "PubMed — postbiotic skin", url: "https://pubmed.ncbi.nlm.nih.gov/?term=postbiotic+skincare" }
+        { label: "PubMed — postbiotic skin (free)", url: "https://pubmed.ncbi.nlm.nih.gov/?term=postbiotic+skincare" }
       ]
     },
     {
@@ -60,7 +60,7 @@ const ingredientsData = {
       source: "Plant-Derived",
       novelty: "Mainstream",
       links: [
-        { label: "Google Scholar — bakuchiol retinol", url: "https://scholar.google.com/scholar?q=bakuchiol+retinol+alternative" },
+        { label: "Google Scholar — bakuchiol retinol alternative (free)", url: "https://scholar.google.com/scholar?q=bakuchiol+retinol+alternative" },
         { label: "Cosmetics Design — ingredient news (free)", url: "https://www.cosmeticsdesign.com" }
       ]
     },
@@ -71,7 +71,7 @@ const ingredientsData = {
       source: "Marine-Derived",
       novelty: "Emerging",
       links: [
-        { label: "PubMed — astaxanthin antioxidant", url: "https://pubmed.ncbi.nlm.nih.gov/?term=astaxanthin+skin+antioxidant" }
+        { label: "PubMed — astaxanthin antioxidant (free)", url: "https://pubmed.ncbi.nlm.nih.gov/?term=astaxanthin+skin+antioxidant" }
       ]
     },
     {
@@ -81,7 +81,7 @@ const ingredientsData = {
       source: "Biotech-Derived",
       novelty: "Saturated",
       links: [
-        { label: "Google Scholar — niacinamide skin brightening", url: "https://scholar.google.com/scholar?q=niacinamide+brightening+efficacy" }
+        { label: "Google Scholar — niacinamide skin brightening (free)", url: "https://scholar.google.com/scholar?q=niacinamide+brightening+efficacy" }
       ]
     },
     {
@@ -102,7 +102,7 @@ const ingredientsData = {
       source: "Fungal Extract",
       novelty: "Emerging",
       links: [
-        { label: "Google Scholar — tremella hyaluronic", url: "https://scholar.google.com/scholar?q=tremella+mushroom+hyaluronic+acid" }
+        { label: "Google Scholar — tremella hyaluronic (free)", url: "https://scholar.google.com/scholar?q=tremella+mushroom+hyaluronic+acid" }
       ]
     }
   ],
@@ -116,7 +116,7 @@ const ingredientsData = {
       novelty: "Mainstream",
       links: [
         { label: "Google Scholar — L-theanine anxiolytic animal (free)", url: "https://scholar.google.com/scholar?q=L-theanine+anxiolytic+animal" },
-        { label: "Veterinary Evidence Journal (open access, free)", url: "https://veterinaryevidence.org" },
+        { label: "Veterinary Evidence Journal — open access (free)", url: "https://veterinaryevidence.org" },
         { label: "PetMD — ingredient overview (free)", url: "https://www.petmd.com" }
       ]
     },
@@ -139,14 +139,14 @@ const ingredientsData = {
       novelty: "Emerging",
       links: [
         { label: "Google Scholar — casein peptide anxiolytic (free)", url: "https://scholar.google.com/scholar?q=casein+peptide+anxiolytic+dog" },
-        { label: "Veterinary Evidence Journal (open access, free)", url: "https://veterinaryevidence.org" }
+        { label: "Veterinary Evidence Journal — open access (free)", url: "https://veterinaryevidence.org" }
       ]
     },
     {
       name: "Synthetic Dog-Appeasing Pheromone (DAP)",
       benefit: "Calming and Anxiety Relief",
       subcategory: "Calming and Anxiety Relief",
-      source: "Synthetic/Biotech",
+      source: "Synthetic / Biotech",
       novelty: "Mainstream",
       links: [
         { label: "Google Scholar — DAP pheromone dog anxiety (free)", url: "https://scholar.google.com/scholar?q=dog+appeasing+pheromone+DAP+evidence" },
@@ -168,7 +168,7 @@ const ingredientsData = {
       name: "Puzzle Feeder and Slow-Release Dispensing",
       benefit: "Mental Stimulation and Enrichment",
       subcategory: "Enrichment and Mental Stimulation",
-      source: "Physical/Mechanical",
+      source: "Physical / Mechanical",
       novelty: "Mainstream",
       links: [
         { label: "Google Scholar — canine cognitive enrichment evidence (free)", url: "https://scholar.google.com/scholar?q=canine+cognitive+enrichment+evidence" },
@@ -180,7 +180,7 @@ const ingredientsData = {
       name: "Lick Mat and Sensory Enrichment Surfaces",
       benefit: "Mental Stimulation and Enrichment",
       subcategory: "Enrichment and Mental Stimulation",
-      source: "Physical/Mechanical",
+      source: "Physical / Mechanical",
       novelty: "Emerging",
       links: [
         { label: "Google Scholar — lick mat dog welfare (free)", url: "https://scholar.google.com/scholar?q=lick+mat+dog+welfare+enrichment" },
@@ -191,10 +191,10 @@ const ingredientsData = {
       name: "Modular Enrichment System",
       benefit: "Mental Stimulation and Enrichment",
       subcategory: "Enrichment and Mental Stimulation",
-      source: "Physical/Mechanical",
+      source: "Physical / Mechanical",
       novelty: "Emerging",
       links: [
-        { label: "PSFK — consumer product innovation (free, register)", url: "https://www.psfk.com" },
+        { label: "PSFK — consumer product innovation (free — register)", url: "https://www.psfk.com" },
         { label: "Google Scholar — modular design consumer adoption (free)", url: "https://scholar.google.com/scholar?q=modular+product+design+consumer+adoption" }
       ]
     },
@@ -206,19 +206,19 @@ const ingredientsData = {
       novelty: "Saturated",
       links: [
         { label: "Google Scholar — omega-3 dog health (free)", url: "https://scholar.google.com/scholar?q=omega-3+fatty+acids+dog+health" },
-        { label: "Veterinary Evidence Journal (open access, free)", url: "https://veterinaryevidence.org" },
+        { label: "Veterinary Evidence Journal — open access (free)", url: "https://veterinaryevidence.org" },
         { label: "APVMA — product regulatory guidance (free)", url: "https://www.apvma.gov.au" }
       ]
     },
     {
-      name: "Probiotics (Lactobacillus and Bifidobacterium strains)",
+      name: "Probiotics (Lactobacillus and Bifidobacterium)",
       benefit: "Daily Wellness",
       subcategory: "Wellness and Daily Supplements",
       source: "Fermentation",
       novelty: "Emerging",
       links: [
         { label: "Google Scholar — probiotics gut health dogs (free)", url: "https://scholar.google.com/scholar?q=probiotics+gut+health+dogs" },
-        { label: "Veterinary Evidence Journal (open access, free)", url: "https://veterinaryevidence.org" }
+        { label: "Veterinary Evidence Journal — open access (free)", url: "https://veterinaryevidence.org" }
       ]
     },
     {
@@ -228,7 +228,7 @@ const ingredientsData = {
       source: "Biotech-Derived",
       novelty: "Emerging",
       links: [
-        { label: "Google Scholar — microencapsulation pet supplement (free)", url: "https://scholar.google.com/scholar?q=microencapsulation+supplement+bioavailability" },
+        { label: "Google Scholar — microencapsulation supplement bioavailability (free)", url: "https://scholar.google.com/scholar?q=microencapsulation+supplement+bioavailability" },
         { label: "Lens.org — delivery mechanism patents (free)", url: "https://www.lens.org" },
         { label: "Google Patents — pet supplement delivery (free)", url: "https://patents.google.com/?q=pet+supplement+controlled+release" }
       ]
@@ -237,7 +237,7 @@ const ingredientsData = {
       name: "QR-Enabled Packaging and Digital Transparency",
       benefit: "Packaging and Format Innovation",
       subcategory: "Packaging and Format Innovation",
-      source: "Digital/Connected",
+      source: "Digital / Connected",
       novelty: "Emerging",
       links: [
         { label: "Packaging Digest — smart packaging (free)", url: "https://www.packagingdigest.com" },
@@ -249,7 +249,7 @@ const ingredientsData = {
       name: "Refillable and Sustainable Pack Formats",
       benefit: "Packaging and Format Innovation",
       subcategory: "Packaging and Format Innovation",
-      source: "Sustainable/Circular",
+      source: "Sustainable / Circular",
       novelty: "Emerging",
       links: [
         { label: "Packaging Europe — refillable formats (free)", url: "https://packagingeurope.com" },
@@ -261,10 +261,10 @@ const ingredientsData = {
       name: "Subscription and Routine-Based Delivery Format",
       benefit: "Packaging and Format Innovation",
       subcategory: "Packaging and Format Innovation",
-      source: "Commercial/Format",
+      source: "Commercial / Format",
       novelty: "Emerging",
       links: [
-        { label: "PSFK — DTC innovation case studies (free, register)", url: "https://www.psfk.com" },
+        { label: "PSFK — DTC innovation case studies (free — register)", url: "https://www.psfk.com" },
         { label: "TrendWatching — subscription consumer trends (free plan)", url: "https://www.trendwatching.com" }
       ]
     }
@@ -289,7 +289,7 @@ const ingredientsData = {
       source: "Fermentation",
       novelty: "Emerging",
       links: [
-        { label: "Google Scholar — postbiotic food health (free)", url: "https://scholar.google.com/scholar?q=postbiotic+food+gut+health" },
+        { label: "Google Scholar — postbiotic food gut health (free)", url: "https://scholar.google.com/scholar?q=postbiotic+food+gut+health" },
         { label: "The Spoon — food technology news (free)", url: "https://thespoon.tech" }
       ]
     },
@@ -308,7 +308,7 @@ const ingredientsData = {
       name: "Compostable Flexible Packaging",
       benefit: "Sustainable Format",
       subcategory: "Sustainable Packaging",
-      source: "Sustainable/Circular",
+      source: "Sustainable / Circular",
       novelty: "Emerging",
       links: [
         { label: "Packaging Europe — compostable packaging (free)", url: "https://packagingeurope.com" },
@@ -328,17 +328,17 @@ const filterOptions = {
   },
   petcare: {
     benefits: ["Calming and Anxiety Relief", "Mental Stimulation and Enrichment", "Daily Wellness", "Packaging and Format Innovation"],
-    sources: ["Plant-Derived", "Synthetic/Biotech", "Biotech-Derived", "Physical/Mechanical", "Marine-Derived", "Fermentation", "Digital/Connected", "Sustainable/Circular", "Commercial/Format"],
+    sources: ["Plant-Derived", "Synthetic / Biotech", "Biotech-Derived", "Physical / Mechanical", "Marine-Derived", "Fermentation", "Digital / Connected", "Sustainable / Circular", "Commercial / Format"],
     subcategories: ["Calming and Anxiety Relief", "Enrichment and Mental Stimulation", "Wellness and Daily Supplements", "Packaging and Format Innovation"]
   },
   food: {
     benefits: ["Sugar Reduction", "Gut Health", "Plant-Based Protein", "Sustainable Format"],
-    sources: ["Plant-Derived", "Fermentation", "Sustainable/Circular"],
+    sources: ["Plant-Derived", "Fermentation", "Sustainable / Circular"],
     subcategories: ["Functional Ingredients", "Sustainable Packaging"]
   }
 };
 
-// ─── PUBLIC RESOURCES ────────────────────────────────────────────────────────
+// ─── RESOURCES ───────────────────────────────────────────────────────────────
 
 const publicResources = {
   beauty: [
@@ -363,8 +363,8 @@ const publicResources = {
     { label: "Lens.org — open patent search (free)", url: "https://www.lens.org" },
     { label: "Google Patents — pet care innovations (free)", url: "https://patents.google.com/?q=pet+care+calming+supplement" },
     { label: "Packaging Digest — sustainable packaging news (free)", url: "https://www.packagingdigest.com" },
-    { label: "TrendWatching — consumer trend reports (free plan, register)", url: "https://www.trendwatching.com" },
-    { label: "PSFK — consumer innovation case studies (free, register)", url: "https://www.psfk.com" },
+    { label: "TrendWatching — consumer trend reports (free plan — register)", url: "https://www.trendwatching.com" },
+    { label: "PSFK — consumer innovation case studies (free — register)", url: "https://www.psfk.com" },
     { label: "RMIT Library A-Z Databases — Mintel, IBISWorld, Passport", url: "https://rmit.libguides.com/az.php" }
   ],
   food: [
@@ -380,10 +380,10 @@ const publicResources = {
 
 // ─── NOVELTY BADGE COLOURS ───────────────────────────────────────────────────
 
-const noveltyColour = {
-  "Saturated": "bg-gray-200 text-gray-700",
-  "Mainstream": "bg-blue-100 text-blue-800",
-  "Emerging": "bg-green-100 text-green-800",
+const noveltyStyle = {
+  "Saturated":  { background: "#e9ecef", color: "#495057" },
+  "Mainstream": { background: "#cfe2ff", color: "#084298" },
+  "Emerging":   { background: "#d1e7dd", color: "#0a3622" },
 };
 
 // ─── APP ─────────────────────────────────────────────────────────────────────
@@ -404,39 +404,45 @@ function App() {
   const currentData = ingredientsData[category] || [];
   const currentFilters = filterOptions[category] || { benefits: [], sources: [], subcategories: [] };
   const currentResources = publicResources[category] || [];
+  const hasFilters = benefit || source || subcategory;
 
-  const filtered = currentData.filter((item) => {
-    return (
-      (benefit ? item.benefit === benefit : true) &&
-      (source ? item.source === source : true) &&
-      (subcategory ? item.subcategory === subcategory : true)
-    );
-  });
+  const filtered = currentData.filter((item) =>
+    (benefit ? item.benefit === benefit : true) &&
+    (source ? item.source === source : true) &&
+    (subcategory ? item.subcategory === subcategory : true)
+  );
 
   return (
-    <div className="p-6 space-y-8 max-w-6xl mx-auto">
+    <div style={{ fontFamily: "Arial, Helvetica, sans-serif", maxWidth: "1100px", margin: "0 auto", padding: "32px 24px", color: "#222", fontSize: "15px", lineHeight: "1.6" }}>
 
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold text-red-800">Category Trend Scouting Tool</h1>
-        <p className="text-gray-600 mt-1">
-          Explore ingredients, technologies, and formats by category. All linked sources are free or accessible through your RMIT student login.
-        </p>
-      </div>
+      {/* ── Header ── */}
+      <h1 style={{ color: "#ba372a", fontSize: "28px", fontWeight: "bold", marginBottom: "6px", marginTop: "0" }}>
+        Category Trend Scouting Tool
+      </h1>
+      <p style={{ color: "#2c3e50", fontSize: "15px", marginTop: "0", marginBottom: "28px" }}>
+        Explore ingredients, technologies, and formats by category. All linked sources are free or accessible through your RMIT student login.
+      </p>
 
-      {/* Category selector */}
-      <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg">
-        <label className="block font-semibold mb-2 text-gray-700">Select your product category</label>
-        <div className="flex flex-wrap gap-3">
+      {/* ── Category selector ── */}
+      <div style={{ background: "#f6f6f6", border: "1px solid #e0e0e0", borderRadius: "10px", padding: "16px 18px", marginBottom: "22px" }}>
+        <span style={{ fontWeight: "bold", marginBottom: "10px", display: "block", color: "#222" }}>
+          Select your product category
+        </span>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
           {categories.map((cat) => (
             <button
               key={cat.value}
               onClick={() => handleCategoryChange(cat.value)}
-              className={`px-4 py-2 rounded-lg border font-medium transition-colors ${
-                category === cat.value
-                  ? "bg-red-800 text-white border-red-800"
-                  : "bg-white text-gray-700 border-gray-300 hover:border-red-400"
-              }`}
+              style={{
+                padding: "9px 18px",
+                borderRadius: "8px",
+                border: category === cat.value ? "2px solid #ba372a" : "1px solid #ccc",
+                background: category === cat.value ? "#ba372a" : "#fff",
+                color: category === cat.value ? "#fff" : "#333",
+                fontWeight: category === cat.value ? "bold" : "normal",
+                fontSize: "14px",
+                cursor: "pointer",
+              }}
             >
               {cat.label}
             </button>
@@ -444,55 +450,30 @@ function App() {
         </div>
       </div>
 
-      {/* Filters */}
-      <div className="flex flex-wrap gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1">Sub-category</label>
-          <select
-            value={subcategory}
-            onChange={(e) => setSubcategory(e.target.value)}
-            className="p-2 border border-gray-300 rounded text-sm min-w-48"
-          >
-            <option value="">All sub-categories</option>
-            {currentFilters.subcategories.map((s) => (
-              <option key={s} value={s}>{s}</option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1">Filter by benefit</label>
-          <select
-            value={benefit}
-            onChange={(e) => setBenefit(e.target.value)}
-            className="p-2 border border-gray-300 rounded text-sm min-w-48"
-          >
-            <option value="">All benefits</option>
-            {currentFilters.benefits.map((b) => (
-              <option key={b} value={b}>{b}</option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1">Filter by source</label>
-          <select
-            value={source}
-            onChange={(e) => setSource(e.target.value)}
-            className="p-2 border border-gray-300 rounded text-sm min-w-48"
-          >
-            <option value="">All sources</option>
-            {currentFilters.sources.map((s) => (
-              <option key={s} value={s}>{s}</option>
-            ))}
-          </select>
-        </div>
-
-        {(benefit || source || subcategory) && (
-          <div className="flex items-end">
+      {/* ── Filters ── */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginBottom: "14px", alignItems: "flex-end" }}>
+        {[
+          { label: "Sub-category", value: subcategory, setter: setSubcategory, options: currentFilters.subcategories, placeholder: "All sub-categories" },
+          { label: "Filter by benefit", value: benefit, setter: setBenefit, options: currentFilters.benefits, placeholder: "All benefits" },
+          { label: "Filter by source", value: source, setter: setSource, options: currentFilters.sources, placeholder: "All sources" },
+        ].map(({ label, value, setter, options, placeholder }) => (
+          <div key={label} style={{ display: "flex", flexDirection: "column", minWidth: "200px" }}>
+            <span style={{ fontSize: "13px", fontWeight: "bold", color: "#555", marginBottom: "5px" }}>{label}</span>
+            <select
+              value={value}
+              onChange={(e) => setter(e.target.value)}
+              style={{ padding: "8px 10px", border: "1px solid #bcbcbc", borderRadius: "6px", fontSize: "14px", background: "#fff", color: "#222" }}
+            >
+              <option value="">{placeholder}</option>
+              {options.map((o) => <option key={o} value={o}>{o}</option>)}
+            </select>
+          </div>
+        ))}
+        {hasFilters && (
+          <div style={{ display: "flex", alignItems: "flex-end" }}>
             <button
               onClick={() => { setBenefit(""); setSource(""); setSubcategory(""); }}
-              className="p-2 text-sm text-red-700 border border-red-300 rounded hover:bg-red-50"
+              style={{ padding: "8px 14px", border: "1px solid #ba372a", borderRadius: "6px", background: "#fff", color: "#ba372a", fontSize: "13px", cursor: "pointer" }}
             >
               Clear filters
             </button>
@@ -500,34 +481,38 @@ function App() {
         )}
       </div>
 
-      {/* Results count */}
-      <p className="text-sm text-gray-500">
-        Showing {filtered.length} of {currentData.length} entries
+      {/* ── Results count ── */}
+      <p style={{ fontSize: "13px", color: "#888", marginBottom: "18px" }}>
+        Showing {filtered.length} of {currentData.length} entries{hasFilters ? " — filtered" : ""}
       </p>
 
-      {/* Cards */}
+      {/* ── Cards ── */}
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px", marginBottom: "36px" }}>
           {filtered.map((item, index) => (
-            <div key={index} className="p-5 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="text-base font-semibold text-gray-900 leading-snug pr-2">{item.name}</h3>
-                <span className={`text-xs px-2 py-1 rounded-full font-medium whitespace-nowrap ${noveltyColour[item.novelty] || "bg-gray-100 text-gray-600"}`}>
+            <div key={index} style={{ background: "#fff", border: "1px solid #dde3e6", borderRadius: "10px", padding: "18px", boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "10px", gap: "8px" }}>
+                <span style={{ fontWeight: "bold", fontSize: "15px", color: "#222", lineHeight: "1.3" }}>{item.name}</span>
+                <span style={{
+                  ...(noveltyStyle[item.novelty] || { background: "#e9ecef", color: "#495057" }),
+                  fontSize: "11px", padding: "3px 8px", borderRadius: "12px", fontWeight: "bold", whiteSpace: "nowrap", flexShrink: 0
+                }}>
                   {item.novelty}
                 </span>
               </div>
-              <p className="text-sm text-gray-600 mb-1"><span className="font-medium">Benefit:</span> {item.benefit}</p>
-              <p className="text-sm text-gray-600 mb-1"><span className="font-medium">Source:</span> {item.source}</p>
-              <p className="text-sm text-gray-600 mb-3"><span className="font-medium">Sub-category:</span> {item.subcategory}</p>
-              <ul className="space-y-1">
+              <p style={{ fontSize: "13px", color: "#555", marginBottom: "3px", marginTop: "0" }}>
+                <strong style={{ color: "#333" }}>Benefit:</strong> {item.benefit}
+              </p>
+              <p style={{ fontSize: "13px", color: "#555", marginBottom: "3px", marginTop: "0" }}>
+                <strong style={{ color: "#333" }}>Source:</strong> {item.source}
+              </p>
+              <p style={{ fontSize: "13px", color: "#555", marginBottom: "10px", marginTop: "0" }}>
+                <strong style={{ color: "#333" }}>Sub-category:</strong> {item.subcategory}
+              </p>
+              <ul style={{ margin: "0", padding: "0", listStyle: "none" }}>
                 {item.links.map((link, i) => (
-                  <li key={i}>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-red-700 hover:underline"
-                    >
+                  <li key={i} style={{ marginBottom: "4px" }}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ color: "#ba372a", textDecoration: "none", fontSize: "13px" }}>
                       → {link.label}
                     </a>
                   </li>
@@ -537,41 +522,39 @@ function App() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 text-gray-400">
-          <p className="text-lg">No entries match your current filters.</p>
-          <p className="text-sm mt-1">Try clearing a filter or selecting a different sub-category.</p>
+        <div style={{ textAlign: "center", padding: "48px 0", color: "#aaa" }}>
+          <p style={{ fontSize: "16px", margin: "0 0 8px" }}>No entries match your current filters.</p>
+          <p style={{ fontSize: "13px", margin: "0" }}>Try clearing a filter or selecting a different sub-category.</p>
         </div>
       )}
 
-      {/* Public resources section */}
-      <div className="mt-8 p-6 bg-gray-50 border border-gray-200 rounded-lg">
-        <h3 className="text-lg font-semibold mb-1 text-gray-800">
+      {/* ── Resources section ── */}
+      <div style={{ background: "#f6f6f6", border: "1px solid #dde3e6", borderRadius: "10px", padding: "22px", marginTop: "8px" }}>
+        <h3 style={{ fontSize: "17px", fontWeight: "bold", color: "#222", marginTop: "0", marginBottom: "4px" }}>
           Free research resources — {categories.find(c => c.value === category)?.label}
         </h3>
-        <p className="text-sm text-gray-500 mb-4">
-          All sources below are free or accessible through your RMIT student login at{" "}
-          <a href="https://rmit.libguides.com/az.php" target="_blank" rel="noopener noreferrer" className="text-red-700 hover:underline">
-            RMIT Library A-Z Databases
+        <p style={{ fontSize: "13px", color: "#888", marginBottom: "14px", marginTop: "0" }}>
+          All sources below are free or accessible through your RMIT student login.
+          Library databases are available on the{" "}
+          <a href="https://rmit.libguides.com/az.php" target="_blank" rel="noopener noreferrer" style={{ color: "#ba372a" }}>
+            RMIT Library A-Z Databases page
           </a>.
         </p>
-        <ul className="space-y-2">
-          {currentResources.map((res, i) => (
-            <li key={i}>
-              <a
-                href={res.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-red-700 hover:underline"
-              >
-                → {res.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div style={{ background: "#f7fbff", border: "1px solid #cfe3f6", borderRadius: "8px", padding: "10px 14px", marginBottom: "14px", fontSize: "13px", color: "#2c3e50" }}>
+          <strong>Access key:</strong> Sources marked <strong>[free]</strong> require no login.
+          Sources marked <strong>[free — register]</strong> require a free account.
+          Sources marked <strong>(RMIT login)</strong> require your student credentials.
+        </div>
+        {currentResources.map((res, i) => (
+          <a key={i} href={res.url} target="_blank" rel="noopener noreferrer"
+            style={{ color: "#ba372a", textDecoration: "none", fontSize: "14px", display: "block", marginBottom: "6px" }}>
+            → {res.label}
+          </a>
+        ))}
       </div>
 
-      {/* Footer */}
-      <p className="text-xs text-gray-400 text-center pt-4 border-t border-gray-100">
+      {/* ── Footer ── */}
+      <p style={{ textAlign: "center", fontSize: "12px", color: "#bbb", paddingTop: "20px", marginTop: "24px", borderTop: "1px solid #eee" }}>
         © RMIT University 2026 — MKTG1092 Product Innovation and Management
       </p>
 
